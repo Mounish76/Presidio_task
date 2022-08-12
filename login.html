@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Links for Bootstrap,Icons,CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+        <hr>
+        <div class="signin">
+            <div style="line-height: 0.5">
+            
+            <!-- Signin page, if not (redirect to sign up page)  -->
+            <h5>Hello User!</h5>
+            <span id="smallfont">Please sign in below or <a href="Register.html">Create an account</a></span id="small font">
+            </div>
+            <br>
+
+            <!-- Direct signin or manual signin -->
+            <div class="signinwith">
+                <div id="direct">
+                    <span id="smallfont">Sign in with:</span id="small font">
+                    <button style="background-color: orange;">Google</button><br>
+                    <button style="background-color: green;">Email</button>
+                </div>
+                <div id="border"></div>
+                <div id="manual">
+                    <input type="email" placeholder="Username" id="login-email"><br>
+                    <input type="password" placeholder="Password" id="login-password"><br>
+                    <button style="width: 200px;" id="login-btn" onclick="myfunction()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script source="https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js"></script>;
+<script source="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth.js"></script>;
+<script source="https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js"></script>;
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDeHT6V-Ujk_LAJh8aEjnMzCD09q7AS_b4",
+      authDomain: "presidio-round4.firebaseapp.com",
+      databaseURL: "https://presidio-round4-default-rtdb.firebaseio.com",
+      projectId: "presidio-round4",
+      storageBucket: "presidio-round4.appspot.com",
+      messagingSenderId: "222684270246",
+      appId: "1:222684270246:web:504b5ca6fb77e6a30dee67"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+</html>

@@ -1,0 +1,106 @@
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-item {
+  margin-left: 1em;
+}
+
+.nav-link {
+  margin: 10px;
+  font-size: medium;
+  font-weight: 500;
+  padding: 5px;
+  color: black;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: crimson;
+}
+
+.nav-logo {
+  float: left;
+  font-size: large;
+  font-weight: 500;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+body {
+  font-size: 1em;
+}
+.signup {
+  margin-left: 27%;
+}
+.signup_with {
+  display: flex;
+  flex-direction: row;
+}
+#direct {
+  width: 150px;
+}
+#border {
+  border-left: 2px solid #000;
+  height: 180px;
+}
+#manual {
+  width: 300px;
+  margin-left: 50px;
+}
+input {
+  width: 200px;
+  margin: 3px;
+  padding: 5px;
+  border: 1px solid black;
+}
+button {
+  width: 100px;
+  margin: 3px;
+  padding: 5px;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+}
+button:focus {
+  outline: none;
+}
+hr {
+  border: 1px solid black;
+}
+#smallfont {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+/* small devices (phones) */
+@media only screen and (max-width: 480px) {
+  .signup {
+    margin-left: 5%;
+  }
+  #manual {
+    width: 300px;
+    margin-left: 25px;
+  }
+}

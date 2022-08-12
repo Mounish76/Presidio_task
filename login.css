@@ -1,0 +1,61 @@
+button a,button a:hover{
+  text-decoration: none;
+  color: white;
+}
+body {
+  /* background: -webkit-linear-gradient(to right, #8e9eab, #eef2f3); 
+    background: linear-gradient(to right, #8e9eab, #eef2f3); */
+  font-size: 1em;
+}
+.signin {
+  margin-left: 27%;
+}
+.signinwith {
+  display: flex;
+  flex-direction: row;
+}
+#direct {
+  width: 150px;
+}
+#border {
+  border-left: 2px solid #000;
+  height: 125px;
+}
+#manual {
+  width: 300px;
+  margin-left: 50px;
+}
+input {
+  width: 200px;
+  margin: 3px;
+  padding: 5px;
+  border: 1px solid black;
+}
+button {
+  width: 100px;
+  margin: 3px;
+  padding: 5px;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+}
+button:focus {
+  outline: none;
+}
+hr {
+  border: 1px solid black;
+}
+#smallfont {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 480px) {
+  .signin {
+    margin-left: 5%;
+  }
+  #manual {
+    width: 300px;
+    margin-left: 25px;
+  }
+}

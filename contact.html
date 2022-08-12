@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+
+    <!-- Links for Bootstrap,Icons,CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  
+  <body>
+    <!-- Container class(To set the contents margin) -->
+    <div class="container">
+
+      <!-- Navigation Bar (To navigate between the pages) -->
+      <header class="header">
+        <nav class="navbar">
+          <span id="city" class="nav-logo"> LOGO </span>
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a href="login.html" class="nav-link">Signin</a>
+            </li>
+            <li class="nav-item">
+              <a href="Register.html" class="nav-link">Signup</a>
+            </li>
+          </ul>
+
+          <!-- Menu icon (3 bars) -->
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+
+
+      <!-- Form to contact, to express their opinion on this website -->
+      <div class="contactpage">
+        <div id="contact_us">
+          <p>Contact Us</p>
+        </div>
+
+        <!-- Form responses will be stored in a google sheet -->
+        <!-- Google sheet, which is in google drive, responses can only be seen by developer  -->
+        <form
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSey85wQKjYktamCzhvWZIZtUQi3d9bN7LHKBPGmvAZuWJsWXQ/formResponse"
+          id="details_form" target="_self" method="POST" autocomplete="off" >
+          <input
+            type="text" formControlName="name" placeholder="Name" name="entry.1925486371" required />
+          <input
+            type="email" formControlName="email" placeholder="Email" name="entry.1533018130" required/>
+          <textarea
+            formControlName="message" id="" cols="30" rows="5" placeholder="Message" name="entry.137271888" required
+          ></textarea>
+          <button type="submit" (click)="thankyou()">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Javascript for responsive navbar -->
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
